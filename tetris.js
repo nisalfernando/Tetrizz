@@ -9,7 +9,7 @@ context.fillRect(0, 0, canvas.clientWidth, canvas.height);
 // Creating T shaped piece
 const matrix = [[0, 0, 0], [1, 1, 1], [0, 1, 0]];
 
-// Drawing the T shaped peice
+// Drawing the T shaped piece
 matrix.forEach((row, y) => {
     row.forEach((value, x) => {
         if (value !== 0) {
