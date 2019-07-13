@@ -24,6 +24,7 @@ function drawMatrix(matrix, offset) {
     });
 }
 
+// Player's structure
 const player = {
     pos: { x: 5, y: 5 },
     matrix: matrix
