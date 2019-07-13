@@ -13,15 +13,15 @@ context.fillRect(0, 0, canvas.clientWidth, canvas.height);
 const matrix = [[0, 0, 0], [1, 1, 1], [0, 1, 0]];
 
 // Drawing the T shaped piece
-function drawMatrix(matrix) {
+function drawMatrix(matrix, offset) {
     matrix.forEach((row, y) => {
         row.forEach((value, x) => {
             if (value !== 0) {
                 context.fillStyle = "red";
-                context.fillRect(x, y, 1, 1);
+                context.fillRect(x + offset.x, y + offset.y, 1, 1);
             }
         });
     });
 }
 
-drawMatrix(matrix);
+drawMatrix(matrix, { x: 5, y: 5 });
