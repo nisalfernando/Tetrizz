@@ -28,8 +28,11 @@ function drawMatrix(matrix, offset) {
     });
 }
 
+let lastTime = 0;
+
 // Draw game continuesly even when change the position
-function update() {
+function update(time = 0) {
+    console.log(time);
     draw();
     requestAnimationFrame(update);
 }
