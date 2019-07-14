@@ -12,6 +12,11 @@ context.fillRect(0, 0, canvas.clientWidth, canvas.height);
 // Creating T shaped piece
 const matrix = [[0, 0, 0], [1, 1, 1], [0, 1, 0]];
 
+// General draw function
+function draw() {
+    drawMatrix(player.matrix, player.pos);
+}
+
 // Drawing the T shaped piece
 function drawMatrix(matrix, offset) {
     matrix.forEach((row, y) => {
@@ -30,4 +35,4 @@ const player = {
     matrix: matrix
 };
 
-drawMatrix(player.matrix, player.pos);
+draw();
