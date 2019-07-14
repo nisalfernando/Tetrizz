@@ -29,10 +29,16 @@ function drawMatrix(matrix, offset) {
     });
 }
 
+// Draw game continuesly even when change the position
+function update() {
+    draw();
+    requestAnimationFrame(update);
+}
+
 // Player's structure
 const player = {
     pos: { x: 5, y: 5 },
     matrix: matrix
 };
 
-draw();
+update();
