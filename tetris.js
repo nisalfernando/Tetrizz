@@ -28,11 +28,23 @@ function drawMatrix(matrix, offset) {
     });
 }
 
+let dropCounter = 0;
+let dropInterval = 1000;
+
 let lastTime = 0;
 
 // Draw game continuesly even when change the position
 function update(time = 0) {
-    console.log(time);
+    const deltaTime = time - lastTime;
+    lastTime = time;
+
+    // making drop
+    dropCounter += deltaTime;
+    if (dropCounter > dropInterval) {
+        player.pos.y++;
+        dropCounter = 0;
+    }
+
     draw();
     requestAnimationFrame(update);
 }
