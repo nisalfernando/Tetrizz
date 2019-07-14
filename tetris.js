@@ -5,15 +5,14 @@ const context = canvas.getContext("2d");
 // Making the pieces big
 context.scale(20, 20);
 
-// Drawing on canvas
-context.fillStyle = "#000";
-context.fillRect(0, 0, canvas.clientWidth, canvas.height);
-
 // Creating T shaped piece
 const matrix = [[0, 0, 0], [1, 1, 1], [0, 1, 0]];
 
 // General draw function
 function draw() {
+    // Drawing on canvas
+    context.fillStyle = "#000";
+    context.fillRect(0, 0, canvas.clientWidth, canvas.height);
     drawMatrix(player.matrix, player.pos);
 }
 
