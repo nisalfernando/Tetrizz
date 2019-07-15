@@ -60,6 +60,8 @@ document.addEventListener("keydown", event => {
     // Using keyCodes to control the pieces
     if (event.keyCode === 37) {
         player.pos.x--;
+    } else if (event.keyCode === 39) {
+        player.pos.x++;
     }
 });
 
