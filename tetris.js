@@ -55,4 +55,9 @@ const player = {
     matrix: matrix
 };
 
+// Keyboard control
+document.addEventListener("keydown", event => {
+    console.log(event);
+});
+
 update();
