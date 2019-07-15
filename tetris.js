@@ -57,7 +57,10 @@ const player = {
 
 // Keyboard control
 document.addEventListener("keydown", event => {
-    console.log(event);
+    // Using keyCodes to control the pieces
+    if (event.keyCode === 37) {
+        player.pos.x--;
+    }
 });
 
 update();
