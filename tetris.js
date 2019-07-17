@@ -8,6 +8,15 @@ context.scale(20, 20);
 // Creating T shaped piece
 const matrix = [[0, 0, 0], [1, 1, 1], [0, 1, 0]];
 
+// To save the all stuck pieces
+function createMatrix(w, h) {
+    const matrix = [];
+    while (h--) {
+        matrix.push(new Array(w).fill(0));
+    }
+    return matrix;
+}
+
 // General draw function
 function draw() {
     // Drawing on canvas
