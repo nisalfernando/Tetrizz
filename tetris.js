@@ -67,6 +67,11 @@ function merge(arena, player) {
 // For the down arrow key
 function playerDrop() {
     player.pos.y++;
+    if (collide(arena, player)) {
+        player.pos.y--;
+        merge(arena, player);
+        player.pos.y = 0;
+    }
     dropCounter = 0;
 }
 
