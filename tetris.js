@@ -38,6 +38,8 @@ function draw() {
     // Drawing on canvas
     context.fillStyle = "#000";
     context.fillRect(0, 0, canvas.clientWidth, canvas.height);
+
+    drawMatrix(arena, { x: 0, y: 0 });
     drawMatrix(player.matrix, player.pos);
 }
 
