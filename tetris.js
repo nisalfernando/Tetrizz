@@ -77,6 +77,7 @@ function playerDrop() {
     dropCounter = 0;
 }
 
+// To move the piece
 function playerMove(dir) {
     player.pos.x += dir;
     if (collide(arena, player)) {
