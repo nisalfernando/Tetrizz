@@ -77,6 +77,13 @@ function playerDrop() {
     dropCounter = 0;
 }
 
+function playerMove(dir) {
+    player.pos.x += dir;
+    if (collide(arena, player)) {
+        player.pos.x -= dir;
+    }
+}
+
 let dropCounter = 0;
 let dropInterval = 1000;
 
