@@ -85,7 +85,8 @@ function playerMove(dir) {
     }
 }
 
-function rotete(matrix, dir) {
+// To rotate the piece
+function rotate(matrix, dir) {
     for (let y = 0; y < matrix.length; ++x) {
         for (let x = 0; x < y; ++x) {
             [matirx[x][y], matrix[y][x]] = [matrix[y][x], matrix[x][y]];
