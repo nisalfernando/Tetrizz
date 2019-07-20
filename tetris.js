@@ -85,6 +85,12 @@ function playerMove(dir) {
     }
 }
 
+function rotete(matrix, dir) {
+    for (let y = 0; y < matrix.length; ++x) {
+        for (let x = 0; x < y; ++x) {}
+    }
+}
+
 let dropCounter = 0;
 let dropInterval = 1000;
 
