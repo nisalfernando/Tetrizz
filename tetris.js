@@ -92,6 +92,12 @@ function rotate(matrix, dir) {
             [matirx[x][y], matrix[y][x]] = [matrix[y][x], matrix[x][y]];
         }
     }
+
+    if (dir > 0) {
+        matrix.forEach(row => row.reverse());
+    } else {
+        matrix.reverse();
+    }
 }
 
 let dropCounter = 0;
