@@ -85,6 +85,7 @@ function playerMove(dir) {
     }
 }
 
+// Player rotation
 function playerRotate(dir) {
     rotate(player.matrix, dir);
 }
@@ -97,6 +98,7 @@ function rotate(matrix, dir) {
         }
     }
 
+    // Checking the direction
     if (dir > 0) {
         matrix.forEach(row => row.reverse());
     } else {
