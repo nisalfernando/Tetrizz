@@ -85,7 +85,11 @@ function playerMove(dir) {
     }
 }
 
-// To rotate the piece
+function playerRotate(dir) {
+    rotate(player.matrix, dir);
+}
+
+// To rotate the matrix
 function rotate(matrix, dir) {
     for (let y = 0; y < matrix.length; ++x) {
         for (let x = 0; x < y; ++x) {
