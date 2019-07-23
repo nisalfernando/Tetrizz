@@ -92,9 +92,9 @@ function playerRotate(dir) {
 
 // To rotate the matrix
 function rotate(matrix, dir) {
-    for (let y = 0; y < matrix.length; ++x) {
+    for (let y = 0; y < matrix.length; ++y) {
         for (let x = 0; x < y; ++x) {
-            [matirx[x][y], matrix[y][x]] = [matrix[y][x], matrix[x][y]];
+            [matrix[x][y], matrix[y][x]] = [matrix[y][x], matrix[x][y]];
         }
     }
 
