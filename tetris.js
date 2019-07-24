@@ -90,11 +90,12 @@ function playerRotate(dir) {
     const pos = player.pos.x;
     let offset = 1;
     rotate(player.matrix, dir);
-    while (collide(arena, matrix)) {
+    while (collide(arena, player)) {
         player.pos.x += offset;
         offset = -(offset + (offset > 0 ? 1 : -1));
         if (offset > player.matrix[0].length) {
             rotate(player.matrix, -dir);
+            player.pos.x = pos;
             return;
         }
     }
