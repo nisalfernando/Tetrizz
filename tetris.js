@@ -92,6 +92,10 @@ function playerRotate(dir) {
     while (collide(arena, matrix)) {
         player.pos.x += offset;
         offset = -(offset + (offset > 0 ? 1 : -1));
+        if (offset > player.matrix[0].length) {
+            rotate(player.matrix, -dir);
+            return;
+        }
     }
 }
 
