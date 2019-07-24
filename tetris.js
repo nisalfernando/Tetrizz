@@ -87,8 +87,12 @@ function playerMove(dir) {
 
 // Player rotation
 function playerRotate(dir) {
+    let offset = 1;
     rotate(player.matrix, dir);
-    while (collide(arena, matrix)) {}
+    while (collide(arena, matrix)) {
+        player.pos.x += offset;
+        offset = -(offset + (offset > 0 ? 1 : -1));
+    }
 }
 
 // To rotate the matrix
