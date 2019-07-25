@@ -33,6 +33,9 @@ function createMatrix(w, h) {
     return matrix;
 }
 
+// Creating different pieces
+function createPiece(type) {}
+
 // General draw function
 function draw() {
     // Drawing on canvas
