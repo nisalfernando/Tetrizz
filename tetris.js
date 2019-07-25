@@ -5,9 +5,6 @@ const context = canvas.getContext("2d");
 // Making the pieces big
 context.scale(20, 20);
 
-// Creating T shaped piece
-const matrix = [[0, 0, 0], [1, 1, 1], [0, 1, 0]];
-
 // Collide function
 function collide(arena, player) {
     const [m, o] = [player.matrix, player.pos];
@@ -34,7 +31,11 @@ function createMatrix(w, h) {
 }
 
 // Creating different pieces
-function createPiece(type) {}
+function createPiece(type) {
+    if (type === "T") {
+        return [[0, 0, 0], [1, 1, 1], [0, 1, 0]];
+    }
+}
 
 // General draw function
 function draw() {
@@ -146,7 +147,7 @@ const arena = createMatrix(12, 20);
 // Player's structure
 const player = {
     pos: { x: 5, y: 5 },
-    matrix: matrix
+    matrix: createPiece("T")
 };
 
 // Keyboard control
