@@ -101,6 +101,15 @@ function playerMove(dir) {
     }
 }
 
+// Getting random piece
+function playerReset() {
+    const pieces = "ILJOTSZ";
+    player.matrix = createPiece(pieces[(pieces.length * Math.random()) | 0]);
+    player.pos.y = 0;
+    player.pos.x =
+        ((arena[0].length / 2) | 0) - ((player.matrix[0].length / 2) | 0);
+}
+
 // Player rotation
 function playerRotate(dir) {
     const pos = player.pos.x;
