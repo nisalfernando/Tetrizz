@@ -43,9 +43,9 @@ function createPiece(type) {
     } else if (type === "I") {
         return [[0, 5, 0, 0], [0, 5, 0, 0], [0, 5, 0, 0], [0, 5, 0, 0]];
     } else if (type === "S") {
-        return [[0, 1, 1], [1, 1, 0], [0, 0, 0]];
+        return [[0, 6, 6], [6, 6, 0], [0, 0, 0]];
     } else if (type === "Z") {
-        return [[1, 1, 0], [0, 1, 1], [0, 0, 0]];
+        return [[7, 7, 0], [0, 7, 7], [0, 0, 0]];
     }
 }
 
