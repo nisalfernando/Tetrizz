@@ -167,6 +167,17 @@ function update(time = 0) {
     requestAnimationFrame(update);
 }
 
+const colors = [
+    null,
+    "red",
+    "blue",
+    "violet",
+    "green",
+    "purple",
+    "orange",
+    "pink"
+];
+
 // Calling the function
 const arena = createMatrix(12, 20);
 
