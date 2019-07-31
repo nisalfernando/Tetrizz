@@ -167,6 +167,7 @@ function update(time = 0) {
     requestAnimationFrame(update);
 }
 
+// Piece's colors
 const colors = [
     null,
     "#FF0D72",
