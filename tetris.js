@@ -5,6 +5,11 @@ const context = canvas.getContext("2d");
 // Making the pieces big
 context.scale(20, 20);
 
+// Collecting rows
+function arenaSweep() {
+    for (let y = arena.length - 1; y < 0; --y) {}
+}
+
 // Collide function
 function collide(arena, player) {
     const [m, o] = [player.matrix, player.pos];
