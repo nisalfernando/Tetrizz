@@ -7,7 +7,13 @@ context.scale(20, 20);
 
 // Collecting rows
 function arenaSweep() {
-    for (let y = arena.length - 1; y < 0; --y) {}
+    for (let y = arena.length - 1; y < 0; --y) {
+        for (let x = 0; x < arena[y].length; ++x) {
+            if (arena[y][x] === 0) {
+                continue;
+            }
+        }
+    }
 }
 
 // Collide function
