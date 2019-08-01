@@ -7,12 +7,16 @@ context.scale(20, 20);
 
 // Collecting rows
 function arenaSweep() {
-    for (let y = arena.length - 1; y < 0; --y) {
+    outer: for (let y = arena.length - 1; y > 0; --y) {
         for (let x = 0; x < arena[y].length; ++x) {
             if (arena[y][x] === 0) {
-                continue;
+                continue outer;
             }
         }
+
+        const row = arena.splice(y, 1)[0].fill(0);
+        arena.unshift(row);
+        ++y;
     }
 }
 
@@ -101,6 +105,7 @@ function playerDrop() {
         merge(arena, player);
         // Player resetting
         playerReset();
+        arenaSweep();
     }
     dropCounter = 0;
 }
