@@ -183,6 +183,7 @@ function update(time = 0) {
     requestAnimationFrame(update);
 }
 
+// Display the player's score
 function updateScore() {
     document.getElementById("score").innerText = player.score;
 }
