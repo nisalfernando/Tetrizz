@@ -183,7 +183,9 @@ function update(time = 0) {
     requestAnimationFrame(update);
 }
 
-function updateScore() {}
+function updateScore() {
+    document.getElementById("score").innerText = player.score;
+}
 
 // Piece's colors
 const colors = [
@@ -203,7 +205,8 @@ const arena = createMatrix(12, 20);
 // Player's structure
 const player = {
     pos: { x: 5, y: 5 },
-    matrix: createPiece("T")
+    matrix: createPiece("T"),
+    score: 0
 };
 
 // Keyboard control
