@@ -183,6 +183,8 @@ function update(time = 0) {
     requestAnimationFrame(update);
 }
 
+function updateScore() {}
+
 // Piece's colors
 const colors = [
     null,
