@@ -110,6 +110,7 @@ function playerDrop() {
         // Player resetting
         playerReset();
         arenaSweep();
+        updateScore();
     }
     dropCounter = 0;
 }
