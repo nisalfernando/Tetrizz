@@ -233,6 +233,7 @@ document.addEventListener("keydown", event => {
     }
 });
 
+// Initial functions
 playerReset();
 updateScore();
 update();
